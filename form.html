@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
   <title>Document</title>
 </head>
 
@@ -76,81 +77,85 @@
   </div>
   <div>
   <section class=" container mt-5 mb-5 text-light  ">
-        <form>
+        <form id="form" action="" method="post">
           <div class="row">
             <div class="col text-center">
-              <label for="nom">Ecrivez votre nom</label>
-              <input type="text" class="form-control  my-2" placeholder="Votre Nom">
+              <label for="nom">Ecrivez votre nom:</label>
+              <input type="text" class="form-control  my-2 " width="25" id="nom" name="nom" value="" placeholder="Votre Nom" >
+              <span id="aidenom"></span>
             </div>
             <div class="col text-center pb-2"">
-          <label for=" prenom">Ecrivez votre prenom</label>
-              <input type="text" class="form-control my-2  placeholder=" Votre prenom">
+          <label for=" prenom">Ecrivez votre prenom:</label>
+              <input type="text" class="form-control my-2 "id="prenom" name="prenom" value="" placeholder=" Votre prenom" >
+              <span id="aideprenom"></span>
             </div>
           </div>
           <div class="row">
             <div class="col text-center pb-2"">
-          <label for=" formFile" class="form-label">Veuillez selectionner votre lettre de motivation :</label>
-              <input class="form-control" type="file" id="formFile">
+          <label for=" formFile" class="form-label" >Veuillez selectionner votre lettre de motivation :</label>
+              <input class="form-control" type="file" name="mailm" value="u" id="mailm" >
             </div>
 
             <div class="col text-center pb-2"">
           <label for=" formFile" class="form-label">Veuillez selectionner votre CV :</label>
-              <input class="form-control" type="file" id="formFile">
+              <input class="form-control" type="file" name="mailc" value="x" id="mailc" >
             </div>
           </div>
           <div class=" text-center pb-2">
-            <label for="prenom">Ecrivez votre adresse mail</label>
-            <input type="text" class="form-control my-2" placeholder="INT'School@gmail.com">
+            <label for="prenom" >Ecrivez votre adresse mail:</label>
+            <input type="text" class="form-control my-2 mail text-center "  name="email" id="mail" placeholder="INT'School@gmail.com">
+
           </div>
           <div class="form-group text-center pb-5">
             <label for="exampleFormControlTextarea1">Laissez votre message ici:</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control my-2  " id="exampleFormControlTextarea1" name="text" placeholder="Votre message ici" rows="3"></textarea>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-outline-light my-2 ">Envoyer</button>
+            <input type="submit" class="btn btn-outline-light my-2 " value="Envoyer">
           </div>
         </form>
         </section>
     </div>
     <footer id="footer">
       <div id="nav">
-        <div class=>
-          <nav class="navbar ">
-            <div class="container-fluid d-flex justify-content-between">
-
-              <div>
-                <ul>
-                  <li class="nav-item text-center mx-2 d-flex">
-                    <img src="photo/telephone.png" height="20" width="20">
-                    <p class="mx-2">05-53-96-35-36</p>
-                  </li>
-                  <li class="nav-item text-center d-flex ">
-                    <img src="photo/@.png" height="20" width="20">
-                    <p class="mx-2">Int’school@gmail.com</p>
-                  </li>
-                  <li class="nav-item text-center d-flex ">
-                    <img src="photo/panneau.png" height="20" width="20">
-                    <p class="mx-2">7 Boulevards Charles de Gaule,Parix</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="navbar-brand text-center" href="#">
-                <a class="navbar-brand" href="#">
-                  <img src="photo/esl.png" alt="" width="90" height="90" class="d-inline-block align-text-top">
-                </a>
-              </div>
-              <div>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23157.42333912971!2d-1.5019035876920817!3d43.48819156412996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51418326b7b43f%3A0x82c64e5ef3d74ea8!2sVirtuALL%20PLAY!5e0!3m2!1sfr!2sfr!4v1617879313112!5m2!1sfr!2sfr"
-                  width="260" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                  class="rounded-start rounded-2"></iframe>
-              </div>
-            </div>
-          </nav>
+        <div class="  ">
+            <nav class="navbar ">
+                <div class="container-fluid d-flex justify-content-between pt-3">
+                    <div class="">
+                        <ul class="   ">
+                            <li class="nav-item text-center  d-flex ">
+                                <img class="mx-4"src="photo/telephone.png" height="20" width="20">
+                                <a href="tel:+0553963536" class="mx-2 mb-0 text-dark">0553963536</a>
+                            </li>
+                            <li class="nav-item text-center d-flex ">
+                                <img class="mx-4"src="photo/@.png" height="20" width="20">
+                                <a class="mx-1 text-dark"
+                                    href="mailto:Int’school@gmail.com">Int’school@gmail.com</a>
+                            </li>
+                            <li class="nav-item text-center d-flex ">
+                                <img class="mx-4"src="photo/panneau.png" height="20" width="20">
+                                <p class="mx-1">7 Boulevards Charles de Gaule,Parix</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-brand text-center m-0 p-0  "href="#">
+                        <a class="navbar-brand" href="#">
+                            <img src="photo/esl.png" alt="" width="80" height="90"
+                                class="d-inline-block align-text-top logo">
+                        </a>
+                    </div>
+                    <div>
+                      <ul class="">
+                        <li class="nav-item text-center  d-flex mx-5  ">
+                            <p>Cette école est la meilleure  que <br> vous puissiez trouver!</p>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-      </div>
-
+    </div>
 
       <div class="text-center p-1" id="foot" ">
           © 2020 Copyright:
@@ -160,9 +165,13 @@
   </div>
 
   </footer>
+  <script src="jquerry.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
+    <script src="scrpipt.js"></script>
+    
 </body>
 
 </html>

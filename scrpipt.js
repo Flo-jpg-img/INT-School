@@ -40,37 +40,77 @@ $('#prenom').blur(function(){
 
 /**************VERIFICATION SI LES FICHIERS CHOISIS SONT LE MEME ? SI C'EST LES MEME->ALERT**************/
 
-mail=$('#mail').val()
-        
+
+
 $('#form').submit(function(e){
     
-    if ($('#mailm').val()===$('#mailc').val()) {
+    if($('#nom' ).val()== '') {
         e.preventDefault();
-    alert('Attention vous ne pouvez pas selectioner le meme fichier pour la lettre de motivation et le CV')
+        $('#nom').addClass("border1")
+        alert('Veuillez écrire votre nom ');
+        
+    }
+    if($('#prenom' ).val()== '') {
+        e.preventDefault();
+        $('#prenom').addClass("border1")
+        alert('Veuillez écrire votre prenom');
+        
+    }
+    if($('#mailm' ).val()== '') {
+        e.preventDefault();
+        $('#mailm').addClass("border1")
+        alert('Veuillez selectionner un fichier pour votre lettre de motivation ');
+        
+    }
+    if($('#mailc' ).val()== '') {
+        e.preventDefault();
+        $('#mailc').addClass("border1")
+        alert('Veuillez selectionner un fichier pour votre CV ');
+        
+    }else{
+        if ($('#mailm').val()===$('#mailc').val()) {
+            e.preventDefault();
+        alert('Attention vous ne pouvez pas selectioner le meme fichier pour la lettre de motivation et le CV')
+        }
+    }
+
+    $('input,select, email').on("invalid", function(e) {
+        e.preventDefault();
+    }); 
+
+    let emailReg = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
+        
+    let emailaddressVal = $('#mail').val();
+     
+    if(emailaddressVal == '') {
+        e.preventDefault();
+        $('#mail').addClass("border1")
+        alert('Veuillez entrez votre adresse mail.');
+        console.log('vide')
+    } else if(!(emailReg).test(emailaddressVal)) {
+        e.preventDefault();
+        $('#mail').addClass("border1")
+        alert(emailaddressVal+" "+' n\'est pas une adresse email');
+        console.log('mauvais')
+    } else{
+        
+        $('#mail').removeClass("border1")
+        console.log('mopfd')
     }
     
+   
     
 })
 
-/**************VERIFICATION SI L'INPUT DE L'ADRESSE MAIL EST VIDE OU SI IL MANQUE DES CARACTERE DANS L'INPUT**************/
 
-$('#mail').blur(function(e){
-    let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+
+
+/**************VERIFICATION SI L'INPUT DE L'ADRESSE MAIL EST VIDE OU SI IL MANQUE DES CARACTERE DANS L'INPUT AU BLUR**************/
+
+
     
-    let emailaddressVal = $(this).val();
-    
-        if(emailaddressVal == '') {
-            e.preventDefault();
-            alert('L\'adresse mail est vide.');
-            
-        } 
-        e.preventDefault();
-         if(!emailReg.test(emailaddressVal)) {
-            e.preventDefault();
-            alert(emailaddressVal+' '+' n\'est pas une adresse mail correcte');
-        } 
-        
-})
+
 
 
    /**************VERIFICATION SI L'UTILISATEUR ENTRE DES NOMBRE DANS L'INPUT PRENOM OU NOM**************/
