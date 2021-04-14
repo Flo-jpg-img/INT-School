@@ -1,0 +1,94 @@
+.body{
+    background-color: #918A8A;
+}
+
+
+#nav  {
+    background-color:#347D8D;
+    
+}
+/* menu */
+
+a{
+    color:#CC6262 !important;
+}
+/* menu */
+
+
+.cards{
+    background-color:#CC6262 ;
+    
+}
+
+.bou{
+    background-color:#347D8D;
+    position: fixed;
+    right: 0px;
+    top: 200px;
+    
+}
+
+ #footer{
+        background-color:#347D8D;
+    }
+#foot{
+    background-color: rgba(0, 0, 0, 0.2)
+}
+#car{
+    background-image: url(photo/fond2.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position : center center;
+   
+   
+}
+#carou{
+    margin-left:5% ;
+    margin-right:5% ;
+}
+
+a:hover{
+    color: whitesmoke !important;
+}
+
+#pri{
+    background-color: rgb(243, 239, 239);
+}
+.card{
+    width:350px ;
+}
+#para{
+    font-size: 20px;
+}
+ul{
+    list-style: none;
+}
+.int  {
+    background-color:#CC6262;
+}
+.campus{
+    background-image: url(https://gamingcampus.fr/wp-content/uploads/2020/11/home-campus-back.jpg);
+    
+}
+#scroll_to_top {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 15px;
+    right: 30px;
+  }
+  #scroll_to_top img {
+    width: 30px;
+  }
+.formm{
+    background-image: url(https://gamingcampus.fr/wp-content/uploads/2020/11/home-ecoles-fond.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.pres{
+    background-color: #918A8A;
+}
+
+.border1{
+    border:2px solid red  !important;
+}
