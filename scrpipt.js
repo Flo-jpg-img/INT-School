@@ -54,7 +54,7 @@ $('#form').submit(function(e){
 
 /**************VERIFICATION SI L'INPUT DE L'ADRESSE MAIL EST VIDE OU SI IL MANQUE DES CARACTERE DANS L'INPUT**************/
 
-$('#form').submit(function(e){
+$('#mail').blur(function(e){
     let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     
     let emailaddressVal = $(this).val();
